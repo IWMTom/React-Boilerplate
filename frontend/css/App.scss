@@ -1,0 +1,83 @@
+@mixin vertical-align($position: relative) {
+	position: $position;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+@function em($pixels, $context: 16) {
+	@return #{$pixels/$context}em;
+}
+
+$font-stack: "Montserrat", sans-serif;
+$header-font-stack: "Raleway", sans-serif;
+$colour_grey_98: #fafafa;
+
+::selection {
+	background: $colour_grey_98;
+	color: white;
+}
+html,
+body {
+	height: 100%;
+}
+a,
+body,
+button,
+em,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+label,
+p,
+span,
+strong,
+blockquote {
+	font-family: $font-stack;
+}
+h1 {
+	font-family: $header-font-stack;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+body {
+	background: $colour_grey_98;
+}
+button {
+	border: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+.pure-g > div[class*="pure-u-"] {
+	padding: 0.5em;
+	box-sizing: border-box;
+}
+.container {
+	width: 1140px;
+	margin: auto;
+}
+
+@media screen and (max-device-width: 900px) {
+	body {
+		font-size: 0.8em;
+	}
+	.pure-g > [class*="pure-u-"] {
+		width: 100%;
+	}
+	.container {
+		width: 100%;
+		padding: 1em;
+		box-sizing: border-box;
+	}
+}
