@@ -4,7 +4,7 @@
   "description": "!!!!!!!!!!!!!!!!!!!!PROJECT DESCRIPTION!!!!!!!!!!!!!!!!!!!!",
   "main": "index.js",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "node server.js port=7777",
     "build": "next build",
     "start": "next start",
     "test": "NODE_ENV=test jest --watch",
